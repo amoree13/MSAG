@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria Sophia Amor M. Grantos — Nursing · Compassion · Story · Craft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#efe7dd;
+    --panel:#faf5ee;
+    --ink:#3a2417;
+    --rust:#9b4922;
+    --brown:#764b36;
+    --orange:#d1774c;
+    --pastel:#d8a790;
+    --rule: rgba(58,36,23,0.16);
+    --display: 'Cormorant Garamond', Georgia, serif;
+    --body: 'Sorts Mill Goudy', Georgia, serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:1.08rem;
+    line-height:1.65;
+  }
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:980px;margin:0 auto;padding:0 32px;}
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:20;
+    background:rgba(239,231,221,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{
+    max-width:980px;margin:0 auto;padding:16px 32px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .nav-mark{
+    font-family:var(--display);font-style:italic;font-weight:600;
+    font-size:1.3rem;color:var(--rust);text-decoration:none;
+  }
+  .nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0;}
+  .nav-links a{
+    color:var(--brown);text-decoration:none;font-size:0.95rem;
+    border-bottom:1px solid transparent;
+  }
+  .nav-links a:hover{border-bottom-color:var(--orange);}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:88px 0 60px;}
+  .hero-inner{
+    display:grid;grid-template-columns:1.15fr 0.85fr;
+    gap:36px;align-items:center;
+  }
+  .hero-tagline{
+    font-family:var(--display);font-style:italic;font-weight:600;
+    font-size:1.15rem;letter-spacing:0.01em;color:var(--rust);
+    margin:0 0 18px;
+  }
+  .hero-name{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(2.6rem, 5.6vw, 3.9rem);
+    line-height:1.04;margin:0 0 20px;color:var(--ink);
+  }
+  .hero-desc{max-width:48ch;font-size:1.12rem;color:var(--brown);margin:0 0 30px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:11px 24px;
+    font-family:var(--body);font-size:0.98rem;
+    text-decoration:none;border:1px solid var(--brown);
+    color:var(--ink);border-radius:2px;
+  }
+  .btn.primary{background:var(--orange);border-color:var(--orange);color:#fdf8f2;}
+  .btn.primary:hover{background:var(--rust);border-color:var(--rust);}
+  .btn.ghost:hover{background:var(--brown);color:#fdf8f2;}
+
+  .hero-mark{display:flex;justify-content:center;}
+  .hero-mark svg{width:100%;max-width:280px;}
+
+  hr.rule{border:none;border-top:1px solid var(--rule);margin:0;}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:60px 0;}
+  section + section{border-top:1px solid var(--rule);}
+  .section-head{
+    display:flex;align-items:baseline;justify-content:space-between;
+    margin-bottom:34px;flex-wrap:wrap;gap:8px;
+  }
+  .section-head h2{
+    font-family:var(--display);font-weight:700;font-style:italic;
+    font-size:1.8rem;margin:0;color:var(--ink);
+  }
+  .section-head span{font-family:var(--body);font-size:0.9rem;color:var(--brown);}
+
+  .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;}
+  .about-grid p{color:var(--brown);margin:0 0 16px;}
+  .values{list-style:none;margin:0;padding:0;}
+  .values li{
+    padding:12px 0;border-top:1px solid var(--rule);
+    display:flex;justify-content:space-between;font-family:var(--body);font-size:0.98rem;
+  }
+  .values li:last-child{border-bottom:1px solid var(--rule);}
+  .values b{color:var(--rust);font-weight:400;font-family:var(--display);font-style:italic;font-size:1.05rem;}
+
+  /* ---------- WORKS ---------- */
+  .work-card{
+    display:grid;grid-template-columns:0.9fr 1.1fr;gap:36px;
+    padding:34px 0;border-top:1px solid var(--rule);
+    align-items:start;
+  }
+  .work-card:first-of-type{border-top:none;padding-top:0;}
+  .work-thumb{border:1px solid var(--rule);overflow:hidden;background:#fff;}
+  .work-thumb img{width:100%;height:auto;display:block;}
+  .work-thumb.two-up{display:grid;grid-template-columns:1fr 1fr;}
+  .work-thumb.two-up img{height:100%;object-fit:cover;}
+  .work-tag{
+    font-family:var(--display);font-style:italic;font-size:0.92rem;font-weight:600;
+    color:var(--orange);margin:0 0 8px;
+  }
+  .work-card h3{font-family:var(--display);font-weight:700;font-size:1.5rem;margin:0 0 10px;color:var(--ink);}
+  .work-card p{color:var(--brown);margin:0 0 10px;font-size:1rem;}
+  .work-why{
+    border-left:2px solid var(--pastel);
+    padding-left:14px;margin-top:14px;font-size:0.97rem;color:var(--brown);
+  }
+  .work-why b{color:var(--rust);font-family:var(--display);font-style:italic;font-size:0.95rem;display:block;margin-bottom:4px;}
+
+  /* ---------- BRAND ---------- */
+  .swatch-bar{display:flex;width:100%;height:64px;border:1px solid var(--rule);margin-bottom:28px;}
+  .swatch{display:flex;align-items:flex-end;justify-content:flex-start;padding:8px 10px;}
+  .swatch span{font-family:var(--body);color:#fdf8f2;font-size:0.72rem;text-shadow:0 1px 2px rgba(0,0,0,0.3);}
+  .type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px;}
+  .type-card{border:1px solid var(--rule);padding:22px;background:var(--panel);}
+  .type-card b{display:block;font-family:var(--body);font-size:0.78rem;color:var(--brown);margin-bottom:10px;}
+  .type-card .sample{font-size:2.1rem;color:var(--ink);}
+  .type-card .fname{font-family:var(--body);font-size:0.85rem;color:var(--brown);margin-top:6px;}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:600px;}
+  .contact-item{border:1px solid var(--rule);padding:16px 18px;background:var(--panel);font-family:var(--body);font-size:0.98rem;}
+  .contact-item span{display:block;font-size:0.75rem;color:var(--brown);margin-bottom:4px;}
+  .contact-item a{color:var(--ink);text-decoration:none;}
+  .contact-item a:hover{color:var(--orange);}
+
+  footer{
+    padding:36px 0 60px;
+    font-family:var(--body);font-size:0.85rem;color:var(--brown);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  }
+
+  @media (max-width: 720px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-mark{order:-1;max-width:180px;margin:0 auto 8px;}
+    .about-grid{grid-template-columns:1fr;}
+    .work-card{grid-template-columns:1fr;}
+    .work-thumb.two-up{grid-template-columns:1fr 1fr;}
+    .type-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .nav-links{gap:14px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-mark" href="#top">M · S · A · G</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#brand">Brand</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<div id="top" class="wrap hero">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-tagline">Nursing · Compassion · Story · Craft</p>
+      <h1 class="hero-name">Maria Sophia<br>Amor M. Grantos</h1>
+      <p class="hero-desc">BS Nursing student at Ateneo de Davao University, School of Nursing. This is a running record of the design work I make alongside my coursework — a poster, a personal brand, and an infographic, each with the thinking behind it.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#works">See the work</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-mark">
+      <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#d1774c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M45 90 C30 70 28 45 40 25 C48 35 50 45 52 55 C62 48 74 48 84 55 C86 45 88 35 96 25 C108 45 106 70 91 90"/>
+        <path d="M45 90 C30 110 28 150 45 185 C55 210 80 225 110 225 C145 225 168 205 168 175 C168 150 150 135 128 130 C150 120 165 100 160 78"/>
+        <path d="M110 225 C130 232 155 230 172 215"/>
+        <circle cx="70" cy="88" r="2.5" fill="#d1774c" stroke="none"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2 style="font-family:var(--display);font-style:italic;font-weight:700;font-size:1.8rem;margin-top:0;">About</h2>
+      <p>I'm a BS Nursing student at Ateneo de Davao University, School of Nursing. Outside of clinical coursework, I put together design and communication projects — event materials, a personal brand, and infographics that try to make a small problem easier to see and act on.</p>
+      <p>My personal brand, <em>de Amor closet</em>, is a small play on my own name — <em>Amor</em> is Spanish for love, and the closet is built around giving pre-loved things a second story rather than treating them as used up. The same idea carries into how I approach nursing: paying attention to what's already there before adding something new.</p>
+      <p>My tagline, <em>Nursing – Compassion – Story – Craft</em>, is the short version of how I try to work: caring about people first, listening for the story behind a problem, and being careful about the craft of whatever I make — whether that's a care plan or a poster.</p>
+    </div>
+    <div>
+      <ul class="values">
+        <li><span>Program</span> <b>BS Nursing</b></li>
+        <li><span>School</span> <b>Ateneo de Davao University</b></li>
+        <li><span>Unit</span> <b>School of Nursing</b></li>
+        <li><span>Based in</span> <b>Davao, Philippines</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <span>Class projects &amp; design work</span>
+    </div>
+
+    <div class="work-card">
+      <div class="work-thumb"><img src="assets/activity1-poster.jpg" alt="Free coffee event poster for Arrupe Hall Booth 7, Ateneo de Davao University School of Nursing"></div>
+      <div>
+        <p class="work-tag">Event Poster · Activity 1</p>
+        <h3>Free Coffee — Arrupe Hall, Booth 7</h3>
+        <p>A poster for a free-coffee giveaway booth at the School of Nursing, meant to be readable from across a hallway and to feel like an invitation rather than an announcement.</p>
+        <div class="work-why">
+          <b>Why I made this</b>
+          The brief was simple: get people to stop at the booth. I leaned on a big steaming coffee cup and playful, bubbly lettering so it would read as friendly at a glance — "no catch, just caffeine and good vibes" is the whole pitch, and the design needed to match that tone instead of looking like an ad.
+        </div>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-thumb two-up">
+        <img src="assets/activity2-banner.jpg" alt="de Amor closet logo banner with the tagline Where Every Item Has a Story">
+        <img src="assets/activity2-logo-dark.jpg" alt="de Amor closet logo on a terracotta background, with a line-drawn cat mark">
+      </div>
+      <div>
+        <p class="work-tag">Personal Brand · Activity 2</p>
+        <h3>de Amor closet</h3>
+        <p>A brand identity for a pre-loved closet concept: a line-drawn cat mark, a script-and-serif wordmark, and the tagline "Where Every Item Has a Story."</p>
+        <div class="work-why">
+          <b>Why I made this</b>
+          The name is a small pun on mine — <em>de Amor</em>, "of love" — and I wanted the identity to feel that warm and personal rather than like a generic shop. The cat mark and the handwritten-feeling italic in the wordmark are there so the brand reads as lived-in, matching a closet built on things that already have a history.
+        </div>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-thumb"><img src="assets/activity3-infographic.jpg" alt="Infographic titled Coping with Financial Blind Spots in Student Spending"></div>
+      <div>
+        <p class="work-tag">Infographic · Activity 3</p>
+        <h3>Coping with Financial Blind Spots in Student Spending</h3>
+        <p>An infographic on why student spending is hard to track — split across cash, e-wallets, and bank transfers — with the data behind it and a step-by-step tracking solution: record, categorize, set limits, monitor, forecast, get alerted, and improve.</p>
+        <div class="work-why">
+          <b>Why I made this</b>
+          Small purchases scattered across three different payment methods are exactly the kind of thing that quietly leads to overspending, and I wanted to make that blind spot visible with real numbers rather than just saying "budget better." The seven-step flow at the bottom is meant to be something a student could actually follow, not just a diagram.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="brand">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Brand system</h2>
+      <span>de Amor closet — what this site borrows from</span>
+    </div>
+
+    <div class="swatch-bar">
+      <div class="swatch" style="background:#9b4922;width:26%;"><span>Brown · #9b4922</span></div>
+      <div class="swatch" style="background:#d1774c;width:22%;"><span>Orange · #d1774c</span></div>
+      <div class="swatch" style="background:#764b36;width:20%;"><span>Brown · #764b36</span></div>
+      <div class="swatch" style="background:#d8a790;width:18%;"><span>Pastel Gray Orange · #d8a790</span></div>
+      <div class="swatch" style="background:#efe7dd;width:14%;"><span style="color:#764b36;text-shadow:none;">Light Orange · #efe7dd</span></div>
+    </div>
+
+    <div class="type-grid">
+      <div class="type-card">
+        <b>Body</b>
+        <div class="sample" style="font-family:'Sorts Mill Goudy', serif;">Aa</div>
+        <div class="fname">Sorts Mill Goudy</div>
+      </div>
+      <div class="type-card">
+        <b>Display</b>
+        <div class="sample" style="font-family:'Cormorant Garamond', serif;font-weight:700;">Aa</div>
+        <div class="fname">RoxboroughCF</div>
+      </div>
+      <div class="type-card">
+        <b>Accent</b>
+        <div class="sample" style="font-family:'Cormorant Garamond', serif;font-style:italic;font-weight:600;">Aa</div>
+        <div class="fname">RoxboroughCF Italic</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <span>Let's talk</span>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-item"><span>Email</span><a href="mailto:msamgrantos@addu.edu.ph">msamgrantos@addu.edu.ph</a></div>
+      <div class="contact-item"><span>Phone</span><a href="tel:+639123456789">0912 345 6789</a></div>
+      <div class="contact-item"><span>Location</span><span style="color:var(--ink);">Davao, Philippines</span></div>
+      <div class="contact-item"><span>School</span><span style="color:var(--ink);">Ateneo de Davao University</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>Maria Sophia Amor M. Grantos — Nursing · Compassion · Story · Craft</span>
+  <span>Built with the de Amor closet identity system</span>
+</footer>
+
+</body>
+</html>
